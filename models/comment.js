@@ -9,7 +9,7 @@ Comment.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -17,33 +17,34 @@ Comment.init(
       defaultValue: "Deleted User",
       references: {
         model: "user",
-        key: "id",
-      },
+        key: "id"
+      }
     },
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      defaultValue: DataTypes.NOW
     },
     post_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: "comment",
-        key: "id",
-      },
+        key: "id"
+      }
     },
     comment_text: {
       type: DataTypes.TEXT,
-      allowNull: false,
-    },
+      allowNull: false
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "comment",
+    modelName: "comment"
   }
 );
+
 module.exports = Comment;
