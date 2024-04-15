@@ -1,0 +1,62 @@
+<div class="content column is-offset-1 is-offset-1-mobile is-10-mobile is-10">
+  <div class="box">
+    <div>
+      <h2>Welcome, {{userName}}!</h2>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <h3>New Post:</h3>
+
+      <form class="form new-post-form">
+        <div class="form-group">
+          <label class="has-text-info is-size-5" for="post-name"></label>
+          <input
+            class="form-input input"
+            type="text"
+            id="post-name"
+            name="post-name"
+            placeholder="Post Title"
+          />
+        </div>
+
+        <div class="form-group">
+          <label class="has-text-info is-size-5" for="post-text"></label>
+          <textarea
+            class="textarea has-fixed-size form-input"
+            id="post-text"
+            name="post-text"
+            placeholder="Write a post!"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button class="button" type="submit">Post</button>
+        </div>
+      </form>
+    </div>
+
+    {{#if posts.length}}
+      <div class="col-md-6 project-list">
+        <h3>Posts:</h3>
+
+        {{#each posts as |post|}}
+          <div class="box">
+            <div>
+              <h4><a href="../public/js/post.js">{{post.title}}</a></h4>
+            </div>
+
+            <a href="../public/js/post.js/{{post.id}}">
+              <button class="button">Edit Post</button>
+            </a>
+            <div>
+              <button class="button" data-id="{{post.id}}">DELETE</button>
+            </div>
+          </div>
+        {{/each}}
+      </div>
+    {{/if}}
+  </div>
+
+  <script src="../public/js/dashboard.js"></script>
+</div>

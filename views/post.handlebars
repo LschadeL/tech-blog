@@ -1,0 +1,39 @@
+<div class="content column is-offset-1 is-offset-1-mobile is-10-mobile is-10">
+  <div class="columns is-flex-direction-column is-5">
+
+<div class="box column ">
+    <h2 class="title is-size-2">{{title}}</h2>
+    <p class="is-size-4">{{post_text}}</p>
+    <p class="has-text-right">{{#if
+            edit_flag
+          }}Edited{{else}}Created{{/if}} by {{user.user_name}} on {{format_date date_created}}</p>
+  </div>
+  <h3>Comments:</h3>
+
+  {{#each comments as |comment|}}
+    <div class="box column">
+      <h3 class="is-size-6">{{comment.comment_text}}</h3>
+      <p class="is-size-7 has-text-right">Commented by {{comment.user}} on {{format_date comment.date_created}}</p>
+    </div>
+
+  {{/each}}
+  {{#if logged_in}}
+
+
+  </div>
+  
+    <p>
+      <form class="form comment-form box" id="comment-form">
+
+        <div class="form-group">
+          <textarea class="textarea has-fixed-size" placeholder="Leave a comment!"  id="comment-text"></textarea>
+        </div>
+
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Comment</button>
+        </div>
+      </form>
+    </p>
+    <script src="../public/js/post.js"></script>
+  {{/if}}
+</div>

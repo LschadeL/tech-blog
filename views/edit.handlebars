@@ -1,0 +1,33 @@
+<div class="content column is-offset-1 is-offset-1-mobile is-10-mobile is-10">
+  <div class="box">
+    <h2>Edit a post</h2>
+  </div>
+
+  <form class="form update-post-form">
+    <div class="form-group">
+      <label class="has-text-info is-size-5" for="post-name"></label>
+      <input
+        class="form-input input"
+        type="text"
+        id="post-name"
+        name="post-name"
+        placeholder="Post Title"
+        value="{{title}}"
+      />
+    </div>
+
+    <div class="form-group">
+      <label class="has-text-info is-size-5" for="post-text"></label>
+      <textarea
+        class="textarea has-fixed-size form-input input"
+        id="post-text"
+        name="post-text"
+      >{{post_text}}</textarea>
+    </div>
+    <div class="form-group">
+      <button class="button" type="submit">Update Post</button>
+    </div>
+  </form>
+  <script src="../public/js/edit.js"></script>
+
+</div>

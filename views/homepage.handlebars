@@ -1,0 +1,20 @@
+{{#each posts as |post|}}
+  <div class="box column is-offset-1 is-10 is-offset-1-mobile is-10-mobile">
+    <a href="/post/{{post.id}}">
+      <div>
+        <h3 class="has-text-info is-size-4">
+          {{post.title}}
+        </h3>
+        <p class="has-text-right is-size-7 has-text-info">{{#if
+            edit_flag
+          }}Edited{{else}}Created{{/if}}
+          by
+          {{post.user.userName}}
+          on
+          {{format_date post.date_created}}</p>
+      </div>
+      <div>
+      </div>
+    </a>
+  </div>
+{{/each}}
