@@ -2,7 +2,7 @@
   <div class="columns is-flex-direction-column is-5">
 
 <div class="box column ">
-    <h2 class="title is-size-2">{{title}}</h2>
+    <h2 class="title is-2">{{title}}</h2>
     <p class="is-size-4">{{post_text}}</p>
     <p class="has-text-right">{{#if
             edit_flag
@@ -12,8 +12,8 @@
 
   {{#each comments as |comment|}}
     <div class="box column">
-      <h3 class="is-size-6">{{comment.comment_text}}</h3>
-      <p class="is-size-7 has-text-right">Commented by {{comment.user}} on {{format_date comment.date_created}}</p>
+      <h3 class="is-size-5">{{comment.comment_text}}</h3>
+      <p class="is-size-6 has-text-right">Commented by {{comment.user}} on {{format_date comment.date_created}}</p>
     </div>
 
   {{/each}}

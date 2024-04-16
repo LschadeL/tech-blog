@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Blog</title>
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+      rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
     />
   </head>
 
@@ -19,17 +18,17 @@
         {{#if logged_in}}
           <a
             href="../../public/js/dashboard.js"
-            class="button is-ghost has-text-white is-size-4"
+            class="button is-ghost has-text-white is-normal"
           >Dashboard</a>
 
           <button
-            class="button is-ghost has-text-white is-size-4"
+            class="button is-ghost has-text-white is-normal"
             id="logout"
           >Logout</button>
         {{else}}
           <a
             href="../../public/js/login.js"
-            class="button is-ghost has-text-white is-size-4"
+            class="button is-ghost has-text-white is-normal"
           >Login</a>
         {{/if}}
       </nav>
